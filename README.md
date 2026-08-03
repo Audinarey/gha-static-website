@@ -1,0 +1,1 @@
+# gha-static-website

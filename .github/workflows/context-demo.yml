@@ -8,4 +8,4 @@ jobs:
         run: |
           echo "This workflow is triggered by ${{ github.actor }}"
           echo "This repo name is ${{ github.repository }}"
-          echo "The PR number is ${{ github.event.commits.id }}
+          echo "The PR number is ${{ github.event.commits.id }}"

@@ -11,5 +11,5 @@ jobs:
           echo "The PR number is ${{ github.event.commits.id }}"
           echo "triggered from ${{ github.ref_name }} branch"
 
-      - name: Print all github context variables
-        run: echo "${{ toJson(github) }}"
+      - name: Print all github env variables
+        run: echo "${{ toJson(env) }}"

@@ -3,15 +3,25 @@ on:
   workflow_dispatch: 
     inputs:
       environment: 
+        type: choice # the user is a ble to make a choice from a dropdown
         description: Chose the environment
         required: true
         default: dev
-
+        options:
+          - dev
+          - staging
+          - prod
+          - testing
+      artifact_tag: 
+        description: Choose the git tag to deploy
+        required: true
 jobs: 
     inputs-demo:
       runs-on: ubuntu-latest
       steps:
         - name: Deploy the App
-          run: echo "Deploying the app to ${{ inputs.environment }}"
+          run: | 
+            echo "Deploying the app to ${{ inputs.environment }}"
+            echo "Deploying artifact for app is ${{ inputs.artifact_tag }}"
         
     

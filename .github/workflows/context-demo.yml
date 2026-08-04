@@ -9,6 +9,7 @@ jobs:
           echo "This workflow is triggered by ${{ github.actor }}"
           echo "This repo name is ${{ github.repository }}"
           echo "The PR number is ${{ github.event.commits.id }}"
+          echo "triggered from ${{ github.ref_name }} branch"
 
       - name: Print all github context variables
         run: echo "${{ toJson(github) }}"

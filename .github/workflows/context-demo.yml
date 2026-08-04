@@ -1,0 +1,11 @@
+name: Context Variabe Demo
+on: push
+jobs:
+  context-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: use context variables
+        run: |
+          echo "This workflow is triggered by ${{ github.actor }}"
+          echo "This repo name is ${{ github.repository }}"
+          echo "The PR number is ${{ github.event.commits.id }}

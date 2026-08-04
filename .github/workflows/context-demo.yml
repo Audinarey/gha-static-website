@@ -12,4 +12,6 @@ jobs:
           echo "triggered from ${{ github.ref_name }} branch"
 
       - name: Print all github env variables
-        run: echo "${{ toJson(env) }}"
+        run: |
+          printenv
+          echo "${{ toJson(github) }}"

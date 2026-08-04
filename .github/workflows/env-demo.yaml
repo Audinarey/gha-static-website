@@ -6,5 +6,5 @@ jobs:
   env_demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Connection to env:
+      - name: Connection to env
         run: echo "App is connection to $APP_ENV"

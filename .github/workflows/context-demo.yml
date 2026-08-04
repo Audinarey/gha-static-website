@@ -11,4 +11,4 @@ jobs:
           echo "The PR number is ${{ github.event.commits.id }}"
 
       - name: Print all github context variables
-        run: "${{ toJson(github) }}"
+        run: echo "${{ toJson(github) }}"

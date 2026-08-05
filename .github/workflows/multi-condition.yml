@@ -1,0 +1,9 @@
+name: Or condition
+on: push
+jobs:
+  ordemo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Harry or Audinarey
+        if: github.actor == 'Harry' || github.actor == 'Audinarey'
+        run: echo "This push was triggered by ${{ github.actor }}"

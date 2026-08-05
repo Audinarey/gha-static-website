@@ -8,7 +8,7 @@ on:
       - opened
       - synchronize
 jobs:
-  # this job builds an artifact and creates a tag called version
+  # this job builds an artifact and creates a tag called version saved in buildout
   build:
     outputs:
       buildout: ${{steps.step1.outputs.version}}

@@ -1,5 +1,9 @@
-name: Outputs Demo
-on: push
+name: Outputs Demo Job Level Condition
+on: 
+  pull_request:
+    types: 
+      - opened
+      - synchronize
 jobs:
   # this job builds an artifact and creates a tag called version
   build:

@@ -1,4 +1,4 @@
-name: Outputs Demo Job Level Condition
+name: Outputs Demo Job Level with Condition
 on: 
   push:
     branches:

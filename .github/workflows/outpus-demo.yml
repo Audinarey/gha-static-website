@@ -1,11 +1,20 @@
-name: Outputs Demo
-on: push
+name: Outputs Demo Job Level Condition
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    types: 
+      - opened
+      - synchronize
 jobs:
   # this job builds an artifact and creates a tag called version
   build:
     outputs:
       buildout: ${{steps.step1.outputs.version}}
     runs-on: ubuntu-latest
+    #we want to build only if PR is raised
+    if: github.event_name == 'pull_request'
     steps:
       - name: build step
         id: step1
@@ -17,6 +26,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref_name == 'main'
     steps:
       - name: Deploy the App
         run: echo "We are deploying the app with version ${{ needs.build.outputs.buildout }}"

@@ -11,7 +11,7 @@ jobs:
   # this job builds an artifact and creates a tag called version saved in buildout
   build:
     outputs:
-      buildout: ${{steps.step1.outputs.version}} &&
+      buildout: ${{steps.step1.outputs.version}}
     runs-on: ubuntu-latest
     #we want to build only if PR is raised
     if: github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'main'

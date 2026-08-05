@@ -11,6 +11,7 @@ jobs:
           # echo "The PR number is ${{ github.event.commits.id }}"
           echo "triggered from ${{ github.ref_name }} branch"
 
+      # focus on this and troubleshoot it later
       # - name: Print all github env variables
         # run: |
           # echo "This commit hash is $GITHUB_SHA"

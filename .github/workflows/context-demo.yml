@@ -11,9 +11,9 @@ jobs:
           # echo "The PR number is ${{ github.event.commits.id }}"
           echo "triggered from ${{ github.ref_name }} branch"
 
-      - name: Print all github env variables
-        run: |
-          echo "This commit hash is $GITHUB_SHA"
+      # - name: Print all github env variables
+        # run: |
+          # echo "This commit hash is $GITHUB_SHA"
           # printenv
           # echo "the github variables are \n ${{ toJson(github) }}"
           

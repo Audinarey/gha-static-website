@@ -15,5 +15,5 @@ jobs:
         run: |
           echo "This commit hash is $GITHUB_SHA"
           printenv
-          echo "the github variables are \n ${{ toJson(github) }}"
+          # echo "the github variables are \n ${{ toJson(github) }}"
           
